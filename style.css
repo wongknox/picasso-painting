@@ -1,0 +1,139 @@
+/* Desktop */
+@media (max-width: 1680px) {
+  body {
+    position: absolute;
+    background-color: skyblue;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  h1 {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+  }
+
+  h2 {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+  }
+
+  .sun {
+    background-color: orange;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin: 50px;
+  }
+
+  .cloud {
+    position: relative;
+    background-color: white;
+    width: 100px;
+    height: 50px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+
+  .cloud:nth-child(1) {
+    top: 80px;
+    left: 150px;
+  }
+
+  .cloud:nth-child(2) {
+    top: 100px;
+    left: 200px;
+    width: 500px;
+    height: 80px;
+  }
+
+  .cloud:nth-child(3) {
+    top: 120px;
+    left: 100px;
+    width: 200px;
+    height: 40px;
+  }
+
+  .triangle {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 200px solid darkgreen;
+    bottom: 1;
+    right: 0;
+    z-index: 3;
+  }
+
+  .triangle2 {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 200px solid forestgreen;
+    margin-right: 100px;
+    bottom: 1;
+    right: 400px;
+    z-index: 3;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    width: 1000px;
+    height: 200px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .box {
+    background-color: pink;
+  }
+
+  .big-bottom {
+    grid-column: 1 / -1;
+    background-color: wheat;
+  }
+}
+
+/* iPad */
+@media (max-width: 1024px) {
+  body {
+    background-color: lightcyan;
+  }
+
+  .sun {
+    width: 80px;
+    height: 80px;
+  }
+
+  .grid-container {
+    width: 700px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  body {
+    background-color: teal;
+    display: grid;
+    place-items: center;
+  }
+
+  .sun {
+    width: 60px;
+    height: 60px;
+  }
+
+  .grid-container {
+    width: 90%;
+  }
+
+  .cloud {
+    position: relative;
+  }
+}
